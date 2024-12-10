@@ -1,0 +1,1156 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.logo {
+	max-width: 150px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+p {
+	color: black;
+	font-size: 1.4rem;
+	margin-top: 5px;
+	line-height: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 0.05rem;
+}
+.section-title {
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align: center;
+}
+.section-title span {
+	color: darkolivegreen;
+}
+
+.cta {
+	display: inline-block;
+	padding: 10px 30px;
+	color: white;
+	background-color: transparent;
+	border: 2px solid mediumspringgreen;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	margin-top: 30px;
+	transition: 0.3s ease;
+	transition-property: background-color, color;
+}
+.cta:hover {
+	color: white;
+	background-color: mediumspringgreen;
+}
+.brand h1 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
+}
+.brand h1 span {
+	color: mediumspringgreen;
+}
+
+/* Header section */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header Section */
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Gray background with opacity */
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#header .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: auto;
+  min-height: height: 90px;
+  line-height: normal;
+  padding: 0 20px;
+}
+
+#header .brand {
+  display: flex;
+  align-items: center;
+}
+
+#header .brand img {
+  max-height: 90px; /* Adjust to fit within a certain height */
+  max-width: auto; /* Ensures the width adjusts proportionally */
+  object-fit: contain; /* Ensures the logo fits without distortion */
+  cursor: pointer; /* Makes it clear the icon is clickable */
+}
+
+#header .nav-list {
+  display: flex;
+  align-items: center;
+}
+
+#header .nav-list a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+#header .nav-list a:hover {
+  color: mediumspringgreen;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  z-index: 1001;
+}
+
+.hamburger-menu div {
+  background-color: white;
+  height: 3px;
+  width: 25px;
+  margin: 3px 0;
+  transition: 0.3s ease;
+}
+
+/* Hamburger Menu + Navigation Styling */
+#menu-toggle {
+  display: none; /* Hide the toggle input */
+}
+
+#menu-toggle:checked + .nav-list {
+  display: flex; /* Show the menu when toggle is checked */
+}
+
+#header .nav-list {
+  display: none; /* Hidden by default on small screens */
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: rgba(128, 128, 128, 0.9); /* Same color as header */
+  width: 100%;
+  padding: 10px 0;
+}
+
+#header .nav-list a {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (min-width: 769px) {
+  #header .nav-list {
+    display: flex; /* Always visible on larger screens */
+    position: static;
+    flex-direction: row;
+    background-color: transparent;
+    width: auto;
+    padding: 0;
+  }
+
+  #header .nav-list a {
+    font-size: 1.2rem;
+    margin: 0 15px;
+    text-align: left;
+  }
+
+  .hamburger-menu {
+    display: none; /* Hide hamburger icon on larger screens */
+  }
+}
+
+/* End Header section */
+
+/* Hero Section */
+#hero {
+	background-image: url(./img/hero-bg.png);
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+}
+#hero::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.7;
+	z-index: -1;
+}
+#hero .hero {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 50px;
+	justify-content: flex-start;
+}
+#hero h1 {
+	font-family: "Jaro", serif;
+    font-size: 4rem;
+	color: white;
+    font-weight: 300;
+    font-style: normal;
+    margin: 10px 0;
+}
+#hero p{
+    font-size: 2rem;
+    color: white;
+    font-style: italic;
+    margin: 20px 0;
+}
+/* End Hero Section */
+
+/* Video Section */
+#video {
+  background-image: url(./img/video-bg.png);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  padding: 100px;
+  text-align: center;
+  overflow: hidden; 
+}
+
+#video::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Optional overlay for better contrast */
+  z-index: 1;
+}
+
+#video video, #video img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 0; /* Places the video behind the content */
+}
+
+.video-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  z-index: 2; /* Ensures content is above the video */
+}
+
+iframe {
+  border: none;
+}
+
+/* Team Section */
+#team {
+    background: url('img/team-bg.png') no-repeat center center/cover;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+#team::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.6;
+}
+#team .team {
+	flex-direction: column;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#team .team-top {
+    margin-bottom: 50px;
+}
+#team .team-top h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: white;
+    z-index: 1;
+    position: relative;
+}
+#team .team-top p {
+    font-size: 17px;
+    font-weight: 200;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    line-height: 1.6;
+    color: white;
+    z-index: 1;
+    position: relative;
+}
+#team .team-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+#team .team-item {
+    position: relative;
+    width: 23%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#team .team-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+#team .team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+#team .team-item:hover .team-image img {
+    opacity: 0.3;
+}
+#team .team-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+    width: 50%;
+}
+#team .team-item:hover .team-info {
+    opacity: 0.9;
+}
+#team .team-info h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: white;
+}
+#team .team-info p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: white;
+}
+/* Adjust responsiveness */
+@media (max-width: 1024px) {
+    #team .team-bottom {
+        flex-wrap: wrap;
+    }
+    #team .team-item {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 768px) {
+    #team .team-item {
+        width: 100%;
+    }
+}
+/* End Team Section */
+
+/* Overview Section */
+#overview {
+    background: url('img/overview-bg.png') no-repeat center center/cover;
+    position: relative;
+    padding: 100px 0;
+}
+#overview::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    z-index: 1;
+}
+#overview .overview-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#overview .overview-title {
+    font-size: 50px;
+    color: white;
+    margin-bottom: 20px;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* Vision and Mission Boxes */
+#overview .overview-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+#overview .overview-box {
+    background-color: rgba(255, 255, 255, 0.2); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 45%; /* Adjust to create two boxes side-by-side */
+    color: white;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+/* Hover Effects for Boxes */
+#overview .overview-box:hover {
+    transform: translateY(-10px); /* Lifts the box slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Adds a deeper shadow */
+    background-color: rgba(255, 255, 255, 0.4); /* Lightens the background */
+}
+
+#overview .overview-box h2 {
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: white;
+    transition: color 0.3s;
+}
+
+#overview .overview-box:hover h2 {
+    color: mediumspringgreen; /* Highlights the title on hover */
+}
+
+#overview .overview-box p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: white;
+    transition: color 0.3s;
+}
+
+#overview .overview-box:hover p {
+    color: #e0e0e0; /* Slightly lighter text for better readability */
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    #overview .overview-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    #overview .overview-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+/* Overview Section End */
+
+
+/* SWOT Section */
+#swot {
+  padding: 50px 20px;
+  background: url('img/swot-bg.png') no-repeat center center/cover;
+  position: relative;
+}
+#swot::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  z-index: 1;
+}
+#swot .swot-container {
+  position: relative;
+  z-index: 2;
+}
+#swot .swot-title {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  margin-bottom: 40px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* SWOT Table */
+#swot .swot-table {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#swot .cell {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent box */
+  padding: 20px;
+  border-radius: 10px;
+  width: 23%; /* Equal-width boxes */
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  color: white;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Hover Effects */
+#swot .cell:hover {
+  transform: scale(1.1); /* Enlarges the cell slightly */
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.6); /* Brighter glowing effect */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1)); /* Subtle gradient */
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Adds a border glow */
+}
+
+/* Icon or Letter Animations */
+#swot .cell h2 {
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+#swot .cell:hover h2 {
+  transform: rotate(-5deg) scale(1.2); /* Rotates and enlarges the letter */
+  color: snow;/* Highlights the letter on hover */
+}
+
+/* Different Colors for "S", "W", "O", "T" */
+#swot .strengths h2 { background-color: darkblue; }
+#swot .weaknesses h2 { background-color: darkorange; }
+#swot .opportunities h2 { background-color: darkgreen; }
+#swot .threats h2 { background-color: darkred; }
+
+/* Box Titles */
+#swot .cell h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: white;
+  transition: color 0.3s ease;
+}
+#swot .strengths:hover h3 { color: darkblue; } /* Matches h2 background */
+#swot .weaknesses:hover h3 { color: darkorange; }
+#swot .opportunities:hover h3 { color: darkgreen; }
+#swot .threats:hover h3 { color: darkred; }
+
+/* List Styles */
+#swot .cell ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+}
+#swot .cell li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: white;
+  transition: color 0.3s ease;
+}
+#swot .cell:hover li {
+  color: #f5f5f5; /* Slightly lighter text for better readability */
+}
+
+/* Subtle Floating Animation */
+#swot .cell {
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #swot .swot-table {
+    flex-direction: column;
+    gap: 20px;
+  }
+  #swot .cell {
+    width: 100%;
+  }
+}
+/* End SWOT Section */
+
+
+/* Guideline Principles Section */
+#guide {
+  padding: 60px 20px;
+  background: url('img/guide-bg.png') no-repeat center center/cover;
+  color: #ffffff;
+  position: relative;
+}
+
+#guide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  z-index: 1;
+}
+
+#guide .guide-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center; /* Center-align content within the container */
+}
+
+/* Title Styling */
+#guide .guide-title {
+  display: block; /* Ensure it's treated as a block element */
+  margin: 0 auto 40px; /* Centers the title with margin for spacing */
+  font-size: 50px;
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center; /* Explicitly center text */
+  line-height: 1.2; /* Adjust line spacing */
+}
+
+/* Stepped Layout */
+.stepped-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto-fit layout */
+  gap: 40px; /* Adds spacing between blocks */
+  justify-content: center; /* Centers the grid */
+  align-items: center; /* Vertically aligns items */
+  margin: 0 auto; /* Centers the layout in the container */
+  padding: 20px;
+  max-width: 1200px;
+}
+.step-block {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  max-width: 350px; /* Controls individual block width */
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 0 auto; /* Ensures the block centers in its grid cell */
+}
+.step-block:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+.step-block i.icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #42a5f5;
+}
+.step-block p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: white;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stepped-layout {
+    grid-template-columns: 1fr; /* Single column for small screens */
+    gap: 20px; /* Reduce gap for smaller screens */
+  }
+  .step-block {
+    max-width: 90%; /* Adjusts block width for smaller screens */
+  }
+}
+/* End Guideline Principles Section */
+
+
+/* Broad Strategic Goals Section */
+#broad-goals {
+  padding: 80px 20px;
+  background: url('img/goals-bg.png') no-repeat center center/cover;
+  position: relative;
+  color: #fff;
+}
+#broad-goals::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  z-index: 1;
+}
+#broad-goals .broad-goals-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+#broad-goals .broad-goals-title {
+  font-size: 45px;
+  font-family: "Playfair Display", serif;
+  color: #fff;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4); /* Center line color */
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  z-index: 1;
+  animation: glowingLine 2s infinite ease-in-out;
+}
+
+/* Timeline Block */
+.timeline-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+  position: relative;
+  justify-content: flex-end; /* Align closer to the center line */
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideIn 1.5s forwards ease-out;
+}
+.timeline-block.left {
+  flex-direction: row-reverse;
+  text-align: right;
+  margin-right: 20px; /* Adjust margin */
+}
+.timeline-block.right {
+  flex-direction: row;
+  text-align: left;
+  margin-left: 20px; /* Adjust margin */
+}
+
+/* Goal Icon */
+.timeline-block .goal-icon {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(0, 255, 255, 0.4));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  margin: 0 10px; /* Reduced margin */
+}
+.timeline-block .goal-icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.6);
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.4), rgba(0, 255, 255, 0.6));
+}
+
+/* Goal Content */
+.timeline-block .goal-content {
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-family: "Arial", sans-serif;
+  position: relative;
+  text-align: left;
+  transition: all 0.5s ease;
+  z-index: 3;
+}
+.timeline-block .goal-content:hover {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.6);
+}
+.timeline-block .goal-content h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.timeline-block .goal-content p {
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline-block {
+    flex-direction: column;
+    text-align: center;
+  }
+  .timeline-block.left,
+  .timeline-block.right {
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+  }
+  .timeline::before {
+    left: 50%;
+  }
+}
+
+/* Animations */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowingLine {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+}
+/* End Broad Strategic Goals Section */
+
+
+/* Footer */
+#footer {
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%); /* Gradient background */
+  padding-top: 50px;
+  padding-bottom: 20px;
+  text-align: center;
+  color: white; /* Ensures text is white on a darker background */
+  width: 100%; /* Ensure the footer spans the full width */
+}
+
+#footer .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  width: 100%; /* Ensures footer container takes full width */
+}
+
+#footer .footer .logo {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#footer .footer .footer-logo {
+  width: 150px; /* Set size of the circular background */
+  height: 150px; /* Set size of the circular background */
+  border-radius: 50%; /* Makes the background circular */
+  padding: 10px; /* Add space around the logo */
+  background-color: grey; /* Circular background color for logo */
+  opacity: 0.8;
+  display: inline-block; /* Keeps the logo inline with other content */
+  overflow: hidden; /* Ensures the logo does not overflow the circular shape */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for the glow effect */
+}
+
+#footer .footer .footer-logo img {
+  width: 100%; /* Makes the logo image fill the circle */
+  height: 100%; /* Ensures the logo image fills the circle */
+  object-fit: cover; /* Ensures the logo maintains aspect ratio while filling the circle */
+}
+
+#footer .footer .footer-logo:hover {
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8); /* Glow effect */
+}
+
+#footer .footer .button-box {
+  margin-bottom: 20px;
+}
+
+#footer .footer .btn {
+  background-color: grey; /* Button color */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#footer .footer .btn:hover {
+  background-color: seagreen; /* Hover effect */
+}
+
+#footer p {
+  color: white;
+  font-size: 1.3rem;
+  margin-top: 10px;
+  letter-spacing: 0.1rem;
+}
+
+/* End Footer */
+
+/* Keyframes */
+@keyframes hamburger_puls {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.4);
+	}
+}
+@keyframes text_reveal_box {
+	50% {
+		width: 100%;
+		left: 0;
+	}
+	100% {
+		width: 0;
+		left: 100%;
+	}
+}
+@keyframes text_reveal {
+	100% {
+		color: white;
+	}
+}
+@keyframes text_reveal_name {
+	100% {
+		color: crimson;
+		font-weight: 500;
+	}
+}
+/* End Keyframes */
+
+/* Media Query For Tablet */
+@media only screen and (min-width: 768px) {
+	.cta {
+		font-size: 2.5rem;
+		padding: 20px 60px;
+	}
+	h1.section-title {
+		font-size: 6rem;
+	}
+
+	/* Hero */
+	#hero h1 {
+		font-size: 7rem;
+	}
+	/* End Hero */
+
+	/* Services Section */
+	#services .service-bottom .service-item {
+		flex-basis: 45%;
+		margin: 2.5%;
+	}
+	/* End Services Section */
+
+	/* Project */
+	#projects .project-item {
+		flex-direction: row;
+	}
+	#projects .project-item:nth-child(even) {
+		flex-direction: row-reverse;
+	}
+	#projects .project-item {
+		height: 400px;
+		margin: 0;
+		width: 100%;
+		border-radius: 0;
+	}
+	#projects .all-projects .project-info {
+		height: 100%;
+	}
+	#projects .all-projects .project-img {
+		height: 100%;
+	}
+	/* End Project */
+
+	/* About */
+	#about .about {
+		flex-direction: row;
+	}
+	#about .col-left {
+		width: 600px;
+		height: 400px;
+		padding-left: 60px;
+	}
+	#about .about .col-left .about-img::after {
+		left: -45px;
+		top: 34px;
+		height: 98%;
+		width: 98%;
+		border: 10px solid crimson;
+	}
+	#about .col-right {
+		text-align: left;
+		padding: 30px;
+	}
+	#about .col-right h1 {
+		text-align: left;
+	}
+	/* End About */
+
+	/* contact  */
+	#contact .contact {
+		flex-direction: column;
+		padding: 100px 0;
+		align-items: center;
+		justify-content: center;
+		min-width: 20vh;
+	}
+	#contact .contact-items {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		margin: 0;
+	}
+	#contact .contact-item {
+		width: 30%;
+		margin: 0;
+		flex-direction: row;
+	}
+	#contact .contact-item .icon {
+		height: 100px;
+		width: 100px;
+	}
+	#contact .contact-item .icon img {
+		object-fit: contain;
+	}
+	#contact .contact-item .contact-info {
+		width: 100%;
+		text-align: left;
+		padding-left: 20px;
+	}
+	/* End contact  */
+}
+/* End Media Query For Tablet */
+
+/* Media Query For Desktop */
+@media only screen and (min-width: 1200px) {
+	/* header */
+	#header .hamburger {
+		display: none;
+	}
+	#header .nav-list ul {
+		position: initial;
+		display: block;
+		height: auto;
+		width: fit-content;
+		background-color: transparent;
+	}
+	#header .nav-list ul li {
+		display: inline-block;
+	}
+	#header .nav-list ul li a {
+		font-size: 1.8rem;
+	}
+	#header .nav-list ul a:after {
+		display: none;
+	}
+	/* End header */
+
+	#services .service-bottom .service-item {
+		flex-basis: 22%;
+		margin: 1.5%;
+	}
+}
+/* End  Media Query For Desktop */
